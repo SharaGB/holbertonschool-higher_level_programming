@@ -6,8 +6,8 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *fastptr;
-	listint_t *slowptr;
+	listint_t *fastptr = list;
+	listint_t *slowptr = list;
 
 	if (list != NULL)
 	{
