@@ -11,6 +11,11 @@
      listint_t *tmp = *head;
      listint_t *new = malloc(sizeof(listint_t));
 
+    if (!new)
+    {
+        free(new);
+        return (NULL);
+    }
      new->n = number;
      new->next = NULL;
      if (head == NULL || key < (*head)->n)
@@ -30,5 +35,5 @@
              tmp->next = new;
          }
      }
-     return (*head);
+     return (new);
  }
