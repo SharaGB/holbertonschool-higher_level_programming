@@ -17,7 +17,7 @@
         return (NULL);
     }
      new->n = number;
-     new->next = NULL;
+     new->next = *head;
      if (head == NULL || key < (*head)->n)
      {
          new->next = *head;
