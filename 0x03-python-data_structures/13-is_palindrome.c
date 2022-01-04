@@ -9,7 +9,8 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *low = *head;
-	listint_t *fast = NULL;
+	listint_t *fast = *head;
+	int i = 0;
 
 	if (*head == NULL)
 	{
@@ -19,9 +20,14 @@ int is_palindrome(listint_t **head)
 	{
 		while (fast != NULL && fast->next != NULL)
 		{
-			fast = fast->next->next;
-			low = low->next;
+			while (i == 0)
+			{
+				fast = fast->next->next;
+				low = low->next;
+				i++;
+			}
+			return (1);
 		}
 	}
-	return (1);
+	return (0);
 }
