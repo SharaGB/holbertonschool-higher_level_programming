@@ -25,7 +25,6 @@ int is_palindrome(listint_t **head)
 			prev = low;
 			low = low->next;
 		}
-		return (1);
 	}
 	if (fast != NULL)
 	{
