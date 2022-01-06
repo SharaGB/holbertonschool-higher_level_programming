@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if type(roman_string) is not str and roman_string is None:
+    if not isinstance(roman_string, str) and roman_string is None:
         return 0
     s = roman_string.upper()
     roman = {'I': 1, 'IV': 4, 'V': 5, 'IX': 9, 'X': 10, 'XL': 40, 'L': 50,
