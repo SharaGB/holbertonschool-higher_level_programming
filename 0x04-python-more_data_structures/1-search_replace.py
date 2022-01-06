@@ -1,7 +1,4 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    new_list = my_list.copy()
-    for elm in range(0, len(my_list)):
-        if my_list[elm] == search:
-            my_list[elm] = replace
+    new_list = [(x if x != search else replace) for x in my_list]
     return new_list
