@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-from unittest import result
-
-
 def list_division(my_list_1, my_list_2, list_length):
     new_list = []
     for idx in range(list_length):
