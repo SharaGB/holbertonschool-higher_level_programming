@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Empty class Square definition"""
+"""Class Square definition"""
 
 
 class Square:
@@ -11,8 +11,8 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Initializes the data"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -45,10 +45,11 @@ class Square:
             raise a TypeError exception with the message position must be
             a tuple of 2 positive integers"""
         self.__position = value
-        for idx in value:
-            if type(idx) is not int or len(value) != 2 or idx < 0:
-                raise TypeError("position must be a tuple of 2 positive\
-                                integers")
+
+        if type(value) is not tuple or len(value) != 2\
+           or type(value[0]) is not int or type(value[1]) is not int\
+           or value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
         """Public instance method:
@@ -68,4 +69,4 @@ class Square:
                 print(" ", end='')
             for j in range(self.__size):
                 print("#", end='')
-            print()
+        print()
