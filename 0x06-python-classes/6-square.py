@@ -61,7 +61,8 @@ class Square:
             stdout the square with the character #"""
         if self.__size == 0:
             print()
-        for space in range(self.__position[1]):
+        if self.__position[1] > 0:
+            for space in range(self.__position[1]):
                 print()
         for i in range(self.__size):
             print(" " * self.__position[0], end='')
