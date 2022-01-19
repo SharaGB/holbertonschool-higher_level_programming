@@ -2,9 +2,6 @@
 """Class Square definition"""
 
 
-from ctypes import sizeof
-
-
 class Square:
     """"A class Square that defines a square by:
         - Private instance attribute: size
