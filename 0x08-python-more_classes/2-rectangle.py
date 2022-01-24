@@ -13,8 +13,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initializes the data"""
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -51,5 +51,5 @@ class Rectangle:
     def perimeter(self):
         """Returns the rectangle perimeter"""
         if self.__width == 0 or self.__height == 0:
-            perimeter = 0
+            return 0
         return (self.__width + self.__height) * 2
