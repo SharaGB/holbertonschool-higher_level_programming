@@ -4,9 +4,6 @@ Module to write a class Rectangle
 """
 
 
-import re
-
-
 class Rectangle:
     """Write a class Rectangle that defines a rectangle by:
     - Private instance attribute: width
