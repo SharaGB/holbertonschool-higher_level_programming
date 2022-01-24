@@ -11,7 +11,9 @@ class Rectangle:
     - Public instance method: def area(self)
     - Public instance method: def perimeter(self)
     - print() and str() should print the rectangle
-    - repr() should return a string representation of the rectangle"""
+    - repr() should return a string representation of the rectangle
+    - del - when an instance of Rectangle is deleted
+    - Public class attribute number_of_instances"""
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
