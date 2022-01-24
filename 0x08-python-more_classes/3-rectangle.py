@@ -64,4 +64,4 @@ class Rectangle:
                     str += "#"
                 if h < self.__height - 1:
                     str += "\n"
-            return str
+        return str
