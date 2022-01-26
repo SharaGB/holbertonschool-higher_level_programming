@@ -1,0 +1,154 @@
+=================================
+ The ``lazy_matrix_mul`` module
+=================================
+
+Using ``lazy_matrix_mul``
+-------------------------
+
+::
+    >>> lazy_matrix_mul = __import__("101-lazy_matrix_mul").lazy_matrix_mul
+
+Case: normal.
+::
+    >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[ 7 10]
+     [15 22]]
+
+Case: if no arguments are passed.
+::
+    >>> lazy_matrix_mul()
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+Case: if 2 arguments are passed.
+::
+    >>> lazy_matrix_mul(1, 2)
+    2
+
+Case: a list of arguments.
+::
+    >>> lazy_matrix_mul([[1, 2], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+Case: a dict with arguments.
+::
+    >>> lazy_matrix_mul({3, 6}, {9, 12})
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for *: 'set' and 'set'
+
+    >>> lazy_matrix_mul([[6, 6], {1, 3}], [[4, 2], [8, 4]])
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for *: 'set' and 'int'
+
+    >>> lazy_matrix_mul([[6, 6], [1, 3]], [[4, 2], {8, 4}])
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for *: 'int' and 'set'
+
+Case: many arguments.
+::
+    >>> lazy_matrix_mul(3, 6, 9, 12, 15, 18)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() takes 2 positional arguments but 6 were given
+
+Case: a list with many arguments.
+::
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]], [[9, 10], [11, 12]])
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() takes 2 positional arguments but 3 were given
+
+Case: unordered list.
+::
+    >>> lazy_matrix_mul([[3, 6, 9, 12], [15, 18], [1, 3, 9]], [[5, 10, 15], [30, 25, 20]])
+    Traceback (most recent call last):
+        ...
+    ValueError: setting an array element with a sequence.
+
+	>>> lazy_matrix_mul([[3, 6, 9], [12, 15, 18]], [[1, 3], [9, 12, 15], [18]])
+	Traceback (most recent call last):
+	    ...
+	ValueError: setting an array element with a sequence.
+
+Case: is None.
+::
+    >>> lazy_matrix_mul(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(None, [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], None)
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
+
+Case: None with a list.
+::
+    >>> lazy_matrix_mul([[2, 4], [6, 8]], None)
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
+
+Case: empty lists.
+::
+    >>> lazy_matrix_mul([[], []], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    ValueError: shapes (2,0) and (2,2) not aligned: 0 (dim 1) != 2 (dim 0)
+
+    >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[], []]))
+    []
+
+Case: m_a empty.
+::
+    >>> lazy_matrix_mul([], [[2, 4], [6, 8]])
+    Traceback (most recent call last):
+        ...
+    ValueError: shapes (0,) and (2,2) not aligned: 0 (dim 0) != 2 (dim 0)
+
+Case: m_b empty.
+::
+    >>> lazy_matrix_mul([[2, 4], [6, 8]], [])
+    Traceback (most recent call last):
+	    ...
+    ValueError: shapes (2,2) and (0,) not aligned: 2 (dim 1) != 0 (dim 0)
+
+Case: if passed a string in the list.
+::
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, "Holberton"], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    ValueError: data type must provide an itemsize
+
+    >>> lazy_matrix_mul([[1, "Holberton"], [3, 4]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    ValueError: data type must provide an itemsize
+
+Case: if they are not the same size.
+::
+	>>> lazy_matrix_mul([[1, 2, 3], [4, 5, 6]], [[2, 4], [6, 8]])
+	Traceback (most recent call last):
+	    ...
+	ValueError: shapes (2,3) and (2,2) not aligned: 3 (dim 1) != 2 (dim 0)
+
+Case: integers with floats.
+::
+    >>> print(lazy_matrix_mul([[2.5, 3], [3.33, 4]], [[1, 3.4], [1.5, 2.25]]))
+    [[ 7.    15.25 ]
+     [ 9.33  20.322]]
+
+    >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1.5, 2.5, 3.5], [4.5, 6.5, 7.5]]))
+    [[10.5 15.5 18.5]
+     [22.5 33.5 40.5]]
