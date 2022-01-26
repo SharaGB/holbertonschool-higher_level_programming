@@ -1,0 +1,93 @@
+=================================
+ The ``text_indentation`` module
+=================================
+
+Using ``text_indentation``
+--------------------------
+
+::
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Case: normal.
+::
+    >>> text_indentation("""Hello World! What's your name? Sarah. Python is: ^-^""")
+    Hello World! What's your name?
+    <BLANKLINE>
+    Sarah.
+    <BLANKLINE>
+    Python is:
+    <BLANKLINE>
+    ^-^
+
+Case : if an integer is passed.
+::
+    >>> text_indentation(666)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Case: if you do not pass arguments.
+::
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Case: if no characters are passed.
+::
+    >>> text_indentation("""Hello World!""")
+    Hello World!
+
+Case: two strings.
+::
+    >>> text_indentation("Python is a high-level " "programming language.")
+    Python is a high-level programming language.
+
+Case: more than one string.
+::
+    >>> text_indentation("Python is a high-level ", "programming language", ":)")
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() takes 1 positional argument but 3 were given
+
+Case: if they are only characters.
+::
+    >>> text_indentation("...?:")
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+
+Case: with tabs.
+::
+    >>> text_indentation("""H.   O   .   L   .   A   ?   :3""")
+    H.
+    <BLANKLINE>
+    O   .
+    <BLANKLINE>
+    L   .
+    <BLANKLINE>
+    A   ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    3
+
+Case: if passed None.
+::
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Case: if an float.
+::
+    >>> text_indentation(10.24)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string

@@ -1,0 +1,144 @@
+=============================
+The ``add_integer`` module
+=============================
+
+Using ``add_integer``
+---------------------
+
+::
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+Case: normal.
+::
+    >>> add_integer(1, 2)
+    3
+
+Case: an integer with a negative.
+::
+    >>> add_integer(68, -2)
+    66
+
+Case: a negative with an integer.
+::
+    >>> add_integer(-48, 12)
+    -36
+
+Case: two negatives.
+::
+    >>> add_integer(-108, -202)
+    -310
+
+It also works with floating-point values.
+::
+    >>> add_integer(100.3, -2)
+    98
+
+Case: negative with a float.
+::
+    >>> add_integer(-17, 2.5)
+    -15
+
+Case: 2 floats
+::
+    >>> add_integer(66.6, 33.3)
+    99
+
+Case: a float with an integer.
+::
+    >>> add_integer(1.3, 5)
+    6
+
+Case: an integer with a float.
+::
+    >>> add_integer(17, 3.33)
+    20
+
+Case: a string with an integer
+::
+    >>> add_integer("Hello World!", 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer("22", 0)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Case: an int with a string.
+::
+    >>> add_integer(101, "I'm")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer(14, "9")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+Case: a float with a string.
+::
+    >>> add_integer(3.3, "Hello")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+Case: a string with a float.
+::
+    >>> add_integer("uwu", 9.1)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Case: 3 integers.
+::
+    >>> add_integer(18, 9, 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Case: if more than 2 arguments are passed.
+::
+    >>> add_integer(5, 22, 101, 666, 9)
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 5 were given
+
+Case: if 1 argument is passed.
+::
+    >>> add_integer(2)
+    100
+
+Case: if you do not pass arguments
+::
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Case: to check NaN.
+::
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+
+Case: to check Inf.
+::
+    >>> add_integer(float('Inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+Case: 2 very large integers.
+::
+    >>> add_integer(666666666, 1234567)
+    667901233
+
+Case: if you pass a list.
+::
+    >>> add_integer(['S', 'H', 'A', 'R', 'A'], 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer

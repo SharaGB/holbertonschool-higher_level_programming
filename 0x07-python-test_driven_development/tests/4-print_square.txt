@@ -1,0 +1,115 @@
+=================================
+ The ``print_square`` module
+=================================
+
+Using ``print_square``
+----------------------
+
+::
+    >>> print_square = __import__("4-print_square").print_square
+
+Case: normal.
+::
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+    >>> print_square(0)
+
+    >>> print_square(1)
+    #
+
+Case: if passed a number less than 0.
+::
+    >>> print_square(-6)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+Case: if you do not pass arguments.
+::
+    >>> print_square()
+    Traceback (most recent call last):
+        ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+Case: If you miss more than one argument.
+::
+    >>> print_square(3, 6, 9)
+    Traceback (most recent call last):
+        ...
+    TypeError: print_square() takes 1 positional argument but 3 were given
+
+Case: if a float < 0.
+::
+    >>> print_square(-6.66)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Case: a negative integer.
+::
+    >>> print_square(-6)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+Case: a string.
+::
+    >>> print_square("uwu")
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+    >>> print_square("20")
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Case: if None.
+::
+    >>> print_square(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Case: unknown value.
+::
+    >>> print_square(uwu)
+    Traceback (most recent call last):
+        ...
+    NameError: name 'uwu' is not defined
+
+Case: if a list, dictionary or tuple.
+::
+    >>> print_square([9])
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+    >>> print_square({16})
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+    >>> print_square((6))
+    ######
+    ######
+    ######
+    ######
+    ######
+    ######

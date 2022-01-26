@@ -1,0 +1,223 @@
+=============================
+The ``matrix_divided`` module
+=============================
+
+Using ``matrix_divided``
+------------------------
+
+::
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Case: normal.
+::
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Case: div == 0.
+::
+    >>> matrix = [[-9, 3.36, 45, 0], [6.99, -27, 30, 12.15]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+Case: if div is not an integer or float.
+::
+    >>> matrix = [[9, 18, 27], [3, 6, 9]]
+    >>> matrix_divided(matrix, k)
+    Traceback (most recent call last):
+        ...
+    NameError: name 'k' is not defined
+
+Case: if div is a string.
+::
+    >>> matrix = [[9, 18, 27], [3, 6, 9]]
+    >>> matrix_divided(matrix, "Hey")
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+Case: div is None or Bool.
+::
+    >>> matrix = [[9, 18, 27], [3, 6, 9]]
+    >>> matrix_divided(matrix, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+    >>> matrix = [[1.5, 2.6, 3], [4, 0, 3], [3, 4, 10]]
+    >>> matrix_divided(matrix, True)
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+Case: if div is a negative.
+::
+    >>> matrix = [[50, 30, 20]]
+    >>> matrix_divided(matrix, -2)
+    [[-25.0, -15.0, -10.0]]
+
+Case: no div is passed.
+::
+    >>> matrix = [[20, 19, 18], [17, 16, 15]]
+    >>> matrix_divided(matrix)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Case: if lists are not the same size.
+::
+    >>> matrix = [[24, 25, 26], [57, 58, 59, 80]]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: Each row of the matrix must have the same size
+
+Case: if an argument is passed.
+::
+    >>> matrix = [[9]]
+    >>> matrix_divided(matrix, 3)
+    [[3.0]]
+
+    >>> matrix = [[0]]
+    >>> matrix_divided(matrix, 2)
+    [[0.0]]
+
+Case: an empty list.
+::
+    >>> matrix = [[]]
+    >>> matrix_divided(matrix, 3)
+    [[]]
+
+    >>> matrix = [[], [], []]
+    >>> matrix_divided(matrix, 2)
+    [[], [], []]
+
+Case: if passed an empty tuple.
+::
+    >>> matrix = [()]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Case: no arguments are passed.
+::
+    >>> matrix = ()
+    >>> matrix_divided(matrix, 5)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Case: if passed a tuple with a list.
+::
+    >>> matrix = [(1, 2), [3, 4]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Case: if a dictionary with a list is passed.
+::
+    >>> matrix  = [[1, 2, 3], {4, 5, 6}]
+    >>> matrix_divided(matrix, 5)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Case: if you miss many lists.
+::
+    >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
+    >>> matrix_divided(matrix, 5)
+    [[0.2, 0.4, 0.6], [0.8, 1.0, 1.2], [1.4, 1.6, 1.8], [2.0, 2.2, 2.4]]
+
+Case: if the numbers are very large.
+::
+    >>> matrix = [[90001, 1024], [4000, 5987]]
+    >>> matrix_divided(matrix, 1000)
+    [[90.0, 1.02], [4.0, 5.99]]
+
+Case: a list with floats.
+::
+    >>> matrix = [[3.14, 4.25], [7.05, 14.34]]
+    >>> matrix_divided(matrix, 2.5)
+    [[1.26, 1.7], [2.82, 5.74]]
+
+Case: no matrix is passed.
+::
+    >>> matrix = [[20, 19, 18], [17, 16, 15]]
+    >>> matrix_divided(2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Case: with negative numbers.
+::
+    >>> matrix = [[-9, -27]]
+    >>> matrix_divided(matrix, 9)
+    [[-1.0, -3.0]]
+
+Case: with several types.
+::
+    >>> matrix = [[-9, 3.36, 45, 0], [6.99, -27, 30, 12.15]]
+    >>> matrix_divided(matrix, 3)
+    [[-3.0, 1.12, 15.0, 0.0], [2.33, -9.0, 10.0, 4.05]]
+
+Case: to check NaN.
+::
+    >>> matrix = [[float('NaN')]]
+    >>> matrix_divided(matrix, 2)
+    [[nan]]
+
+Case: to check Inf.
+::
+    >>> matrix = [[float('Inf')]]
+    >>> matrix_divided(matrix, 1)
+    [[inf]]
+
+Case: if div is a NaN.
+::
+    >>> matrix = [[3, 6, 9], [12, 15, 18]]
+    >>> matrix_divided(matrix, float('NaN'))
+    [[nan, nan, nan], [nan, nan, nan]]
+
+Case: if div is Inf.
+::
+    >>> matrix = [[3, 6, 9], [12, 15, 18]]
+    >>> matrix_divided(matrix, float('Inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Case: in which Inf and NaN together.
+::
+    >>> matrix = [[3, 6, float('NaN')], [12, float('Inf'), 18]]
+    >>> matrix_divided(matrix, 15)
+    [[0.2, 0.4, nan], [0.8, inf, 1.2]]
+
+Case: a None argument
+::
+    >>> matrix = [[7, 2.5], [4, None]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Case: if you pass a list with strings.
+::
+    >>> matrix = [["Hola Mundo", 18, 27], [3, 6, 9]]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = [[15, 30, 45], [9, "27", 36]]
+    >>> matrix_divided(matrix, 9)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = [[9, 16], "6"]
+    >>> matrix_divided(matrix, -3)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats

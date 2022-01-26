@@ -1,0 +1,113 @@
+=================================
+ The ``say_my_name`` module
+=================================
+
+Using ``say_my_name``
+---------------------
+
+::
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Case: normal.
+::
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+
+    >>> say_my_name("Bob")
+    My name is Bob 
+
+Case: If first_name is not a string.
+::
+    >>> say_my_name([], "Snow")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+Case: If last_name is not a string.
+::
+    >>> say_my_name("Jon", {})
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+Case: an integer with the last_name.
+::
+    >>> say_my_name(21, "Ferguson")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+Case: first_name with an integer.
+::
+    >>> say_my_name("Ivan", 9)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+Case: if you do not pass arguments.
+::
+    >>> say_my_name()
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Case: with one argument.
+::
+    >>> say_my_name("Cruel")
+    My name is Cruel 
+
+Case: more than 2 arguments.
+::
+    >>> say_my_name("Hola", "Mundo", "Cruel")
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+Case: if you pass only first_name.
+::
+    >>> say_my_name("Sarah", )
+    My name is Sarah 
+
+Case: if you pass only last_name.
+::
+    >>> say_my_name( , "Orión")
+    Traceback (most recent call last):
+        ...
+        say_my_name( , "Orión")
+                     ^
+    SyntaxError: invalid syntax
+
+Case: if invalid arguments are passed.
+::
+    >>> say_my_name(2021, 3.33)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(Holberton, 7)
+    Traceback (most recent call last):
+        ...
+    NameError: name 'Holberton' is not defined
+
+Case: an empty string.
+::
+    >>> say_my_name("", "")
+    My name is  
+
+    >>> say_my_name("World", "")
+    My name is World 
+
+Case: None
+::
+    >>> say_my_name(None, "Marley")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Bob", None)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
