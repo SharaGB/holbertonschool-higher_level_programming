@@ -155,22 +155,26 @@ Case: integers with floats.
 
 Case: missing.
 ::
-    >>> lazy_matrix_mul("Holberton", [[5, 6], [7, 8]])
-    Traceback (most recent call last):
-        ...
-    TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U9') dtype('<U9') dtype('<U9')
+    >>> try:
+    ...     lazy_matrix_mul("Holberton", [[5, 6], [7, 8]])
+    ... except Exception as e:
+    ...     print(e)
+    ufunc 'multiply' did not contain a loop with signature matching types dtype('<U9') dtype('<U9') dtype('<U9')
 
-    >>> lazy_matrix_mul([[1, 2], [3, 4]], "Holberton")
-    Traceback (most recent call last):
-        ...
-    TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U9') dtype('<U9') dtype('<U9')
+    >>> try:
+    ...     lazy_matrix_mul([[1, 2], [3, 4]], "Holberton")
+    ... except Exception as e:
+    ...     print(e)
+    ufunc 'multiply' did not contain a loop with signature matching types dtype('<U9') dtype('<U9') dtype('<U9')
 
-    >>> lazy_matrix_mul([[5, "6"], [7, 8]], [[5, 6], [7, 8]])
-    Traceback (most recent call last):
-        ...
-    ValueError: data type must provide an itemsize
+    >>> try:
+    ...     lazy_matrix_mul([[5, "6"], [7, 8]], [[5, 6], [7, 8]])
+    ... except Exception as e:
+    ...     print(e)
+    data type must provide an itemsize
 
-    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, "6"], [7, 8]])
-    Traceback (most recent call last):
-        ...
-    ValueError: data type must provide an itemsize
+    >>> try:
+    ...     lazy_matrix_mul([[1, 2], [3, 4]], [[5, "6"], [7, 8]])
+    ... except Exception as e:
+    ...     print(e)
+    data type must provide an itemsize
