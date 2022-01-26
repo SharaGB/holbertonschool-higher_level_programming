@@ -7,7 +7,7 @@ This supplies one function, say_my_name(first_name, last_name="")
 
 
 def say_my_name(first_name, last_name=""):
-    """Function that prints My name is <first name> <last name>:
+    """Function that prints My name is first_name last_name:
         >>> say_my_name("Jon", "Snow")
         My name is Jon Snow"""
     if type(first_name) is not str:
