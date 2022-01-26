@@ -6,9 +6,6 @@ The text_indentation module supplies one function, text_indentation(text)
 """
 
 
-from hashlib import new
-
-
 def text_indentation(text):
     """
     Prints a text with 2 new lines after each of these characters: ., ? and :
