@@ -155,26 +155,22 @@ Case: integers with floats.
 
 Case: missing.
 ::
-    >>> try:
-    ...     lazy_matrix_mul("Hello World", [[5, 6], [7, 8]])
-    ... except Exception as e:
-    ...     print(e)
-    ufunc 'multiply' did not contain a loop with signature matching types dtype('<U11') dtype('<U11') dtype('<U11')
+    >>> lazy_matrix_mul([[1, "Holberton"], [[5, 6], [7, 8]])
+    Traceback (most recent call last):
+        ...
+    SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
 
-    >>> try:
-    ...     lazy_matrix_mul([[1, 2], [3, 4]], "Hello World")
-    ... except Exception as e:
-    ...     print(e)
-    ufunc 'multiply' did not contain a loop with signature matching types dtype('<U11') dtype('<U11') dtype('<U11')
+    >>> lazy_matrix_mul([[5, 6], [7, 8]], [[1, "Holberton"])
+    Traceback (most recent call last):
+        ...
+    SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
 
-    >>> try:
-    ...     lazy_matrix_mul([[5, 6], [7, "8"]], [[5, 6], [7, 8]])
-    ... except Exception as e:
-    ...     print(e)
-    data type must provide an itemsize
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, "Holberton"], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    ValueError: data type must provide an itemsize
 
-    >>> try:
-    ...     lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, "8"]])
-    ... except Exception as e:
-    ...     print(e)
-    data type must provide an itemsize
+    >>> lazy_matrix_mul([[1, "Holberton"], [3, 4]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    ValueError: data type must provide an itemsize
