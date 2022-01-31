@@ -6,8 +6,8 @@ This is the ``base_geometry`` module.
 
 class BaseGeometry:
     """ - Public instance method: def area(self).
-        - Public instance method: def integer_validator(self, name, value)"""
-    pass
+        - Public instance method: def integer_validator(self, name, value)
+    """
 
     def area(self):
         """ Raises an Exception. """
