@@ -8,7 +8,7 @@ class MyInt(int):
     """ Class MyInt that inherits from int. """
 
     def __eq__(self, x) -> bool:
-        return False
+        return int(self) != x
 
     def __ne__(self, x) -> bool:
-        return True
+        return int(self) == x
