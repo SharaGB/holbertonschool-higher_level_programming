@@ -129,6 +129,13 @@ Case: if a list.
         ...
     TypeError: tuple must be an integer
 
+Case: if a bool.
+
+    >>> bg.integer_validator("bool", {True})
+    Traceback (most recent call last):
+        ...
+    TypeError: bool must be an integer
+
     >>> bg.integer_validator("bool", True)
     Traceback (most recent call last):
         ...
