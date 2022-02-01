@@ -42,15 +42,21 @@ Case: if value == 0.
 Case: if value < 0.
 ::
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator("integer", -6)
+    >>> bg.integer_validator("negative", -6)
     Traceback (most recent call last):
         ...
-    ValueError: integer must be greater than 0
+    ValueError: negative must be greater than 0
 
 Case: if a string.
 ::
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("Hello", "World")
+    Traceback (most recent call last):
+        ...
+    TypeError: Hello must be an integer
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Hello", "6")
     Traceback (most recent call last):
         ...
     TypeError: Hello must be an integer
@@ -95,6 +101,12 @@ Case: with an argument.
         ...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("String")
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
 Case: if a tuple.
 ::
     >>> bg = BaseGeometry()
@@ -112,9 +124,19 @@ Case: if a list.
     TypeError: integer must be an integer
 
 ::
-    >>> bg.integer_validator("age", (21))
+    >>> bg.integer_validator("tuple", (21, 16))
+    Traceback (most recent call last):
+        ...
+    TypeError: tuple must be an integer
 
     >>> bg.integer_validator("bool", {True})
     Traceback (most recent call last):
         ...
     TypeError: bool must be an integer
+
+Case: None
+::
+    >>> bg.integer_validator("Sarah", None)
+    Traceback (most recent call last):
+        ...
+    TypeError: Sarah must be an integer
