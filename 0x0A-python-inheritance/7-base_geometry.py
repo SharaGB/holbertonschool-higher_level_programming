@@ -8,6 +8,7 @@ class BaseGeometry:
     """ - Public instance method: def area(self).
         - Public instance method: def integer_validator(self, name, value)
     """
+    pass
 
     def area(self):
         """ Raises an Exception. """
