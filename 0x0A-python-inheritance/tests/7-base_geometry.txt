@@ -106,7 +106,15 @@ Case: if a tuple.
 Case: if a list.
 ::
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator(["integers"], [4, 5, 6])
+    >>> bg.integer_validator("integer", [6])
     Traceback (most recent call last):
         ...
-    TypeError: ['integers'] must be an integer
+    TypeError: integer must be an integer
+
+::
+    >>> bg.integer_validator("age", (21))
+
+    >>> bg.integer_validator("bool", {True})
+    Traceback (most recent call last):
+        ...
+    TypeError: bool must be an integer
