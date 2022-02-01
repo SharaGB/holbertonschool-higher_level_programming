@@ -1,0 +1,88 @@
+=============================
+The ``1-my_list` module
+=============================
+
+Using ``my_list``
+-------------------
+
+::
+    >>> MyList = __import__('1-my_list').MyList
+
+Case: normal.
+::
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+Case: if negative numbers are passed.
+::
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(-4)
+    >>> my_list.append(-2)
+    >>> my_list.append(-3)
+    >>> my_list.append(-5)
+    >>> my_list.print_sorted()
+    [-5, -4, -3, -2, -1]
+    >>> print(my_list)
+    [-1, -4, -2, -3, -5]
+
+Case: negative with integers.
+::
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(-4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(-5)
+    >>> my_list.print_sorted()
+    [-5, -4, 1, 2, 3]
+    >>> print(my_list)
+    [1, -4, 2, 3, -5]
+
+Case: with floats.
+::
+    >>> my_list = MyList()
+    >>> my_list.append(1.5)
+    >>> my_list.append(4.6)
+    >>> my_list.append(2.7)
+    >>> my_list.append(3.8)
+    >>> my_list.append(5.9)
+    >>> my_list.print_sorted()
+    [1.5, 2.7, 3.8, 4.6, 5.9]
+    >>> print(my_list)
+    [1.5, 4.6, 2.7, 3.8, 5.9]
+
+Case: if None.
+::
+    >>> my_list = MyList()
+    >>> my_list.append(None)
+    >>> my_list.print_sorted()
+    [None]
+
+Case: if empty.
+::
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+Case: with a string.
+::
+    >>> my_list = MyList()
+    >>> my_list.append("Hello")
+    >>> my_list.print_sorted()
+    ['Hello']
+
+Case: if it is a bool.
+::
+    >>> my_list = MyList()
+    >>> my_list.append(True)
+    >>> my_list.print_sorted()
+    [True]
