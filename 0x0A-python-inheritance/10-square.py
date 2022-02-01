@@ -11,7 +11,7 @@ class Square(Rectangle):
     def __init__(self, size):
         """ Initializes the data. """
         self.__size = size
-        super().__init__(size, size)  # Evita usar el nombre de la clase base
+        super().__init__(size, size)
         self.integer_validator('size', self.__size)
 
     def are(self):
