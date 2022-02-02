@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is the ``3-from_json_string`` module.
+This is the ``6-load_from_json`` module.
 """
 import json
 
