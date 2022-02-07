@@ -49,6 +49,8 @@ class Base:
         """ Returns an instance with all attributes already set. """
         if cls.__name__ == "Rectangle":
             dummy = cls(6, 6)
+        else:
+            dummy = cls(6)
         # Actualiza el diccionario con los elementos de otro objeto diccionario
         # o de un iterable de pares clave/valor (generalmente tuplas)
         dummy.update(**dictionary)
