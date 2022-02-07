@@ -22,7 +22,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """ Returns the JSON string representation. """
         if list_dictionaries is None:
-            return []
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
