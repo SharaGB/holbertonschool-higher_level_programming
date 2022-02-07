@@ -4,8 +4,6 @@ This is the ``base`` module.
 """
 import json
 
-from pyparsing import empty
-
 
 class Base:
     """ Write the first class Base:
