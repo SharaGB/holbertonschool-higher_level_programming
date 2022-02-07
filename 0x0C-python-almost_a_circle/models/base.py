@@ -63,7 +63,6 @@ class Base:
         try:
             with open(filename, mode='r') as a_file:
                 dict = cls.from_json_string(a_file.read())
-            dict = list(cls.create(**list_) for list_ in dict)
+                return list(cls.create(**list_) for list_ in dict)
         except:
-            pass
-        return dict
+            return list()
