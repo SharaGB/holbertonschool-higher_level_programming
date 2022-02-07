@@ -30,7 +30,8 @@ class Base:
         """ Writes the JSON string representation. """
         if list_objs is None:
             emp_list = []
-        emp_list = [cls.to_dictionary(idx) for idx in list_objs]
+        else:
+            emp_list = [cls.to_dictionary(idx) for idx in list_objs]
 
         filename = cls.__name__ + '.json'
         with open(filename, mode='w') as a_file:
