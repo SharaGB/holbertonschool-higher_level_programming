@@ -17,14 +17,6 @@ class TestRectangle(unittest.TestCase):
     Write unittests for the class Rectangle
     """
 
-    @classmethod
-    def setUpClass(cls):
-        Base._Base__nb_objects = 0
-        cls.r1 = Rectangle(6, 6)
-        cls.r2 = Rectangle(2, 3, 4)
-        cls.r3 = Rectangle(5, 6, 7, 8, 9)
-        cls.r4 = Rectangle(1, 2, 3, 4)
-
     def test_pep8_conformance(self):
         """ Test that we conform to PEP8. """
         pep8style = pep8.StyleGuide(quiet=True)
@@ -97,57 +89,6 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, 'y must be >= 0'):
             rec = Rectangle(6, 6, 6, -3)
-
-    def test_str(self):
-        self.assertEqual(str(self.r1), "[Rectangle] (1) 0/0 - 6/6")
-        self.assertEqual(str(self.r2), "[Rectangle] (2) 4/0 - 2/3")
-        self.assertEqual(str(self.r3), "[Rectangle] (9) 7/8 - 5/6")
-        self.assertEqual(str(self.r4), "[Rectangle] (3) 3/4 - 1/2")
-
-    def test_display(self):
-        r = Rectangle(2, 3, 0, 0, 1)
-        with io.StringIO() as display, redirect_stdout(display):
-            Rectangle(1, 2, 3, 4, 5).display()
-
-        with io.StringIO() as display, redirect_stdout(display):
-            Rectangle(3, 4, 5, 6).display()
-
-        with io.StringIO() as display, redirect_stdout(display):
-            Rectangle(11, 12, 13).display()
-
-        with io.StringIO() as display, redirect_stdout(display):
-            Rectangle(3, 4).display()
-
-    def test_to_dictionary(self):
-        dict1 = self.r1.to_dictionary()
-        self.assertEqual({'id': 1, 'width': 6, 'height': 6,
-                          'x': 0, 'y': 0}, dict1)
-        dict2 = self.r2.to_dictionary()
-        self.assertEqual({'id': 2, 'width': 2, 'height': 3,
-                          'x': 4, 'y': 0}, dict2)
-        dict3 = self.r3.to_dictionary()
-        self.assertEqual({'id': 9, 'width': 5, 'height': 6,
-                          'x': 7, 'y': 8}, dict3)
-        dict4 = self.r4.to_dictionary()
-        self.assertEqual({'id': 3, 'width': 1, 'height': 2,
-                          'x': 3, 'y': 4}, dict4)
-
-    def test_update(self):
-        rec = Rectangle(6, 6, 0, 0, 3)
-        self.assertEqual(str(Rectangle(6, 6, 0, 0, 3)),
-                         "[Rectangle] (3) 0/0 - 6/6")
-        rec.update()
-        self.assertEqual(str(rec), "[Rectangle] (3) 0/0 - 6/6")
-        rec.update(89)
-        self.assertEqual(str(rec), "[Rectangle] (89) 0/0 - 6/6")
-        rec.update(89, 1)
-        self.assertEqual(str(rec), "[Rectangle] (89) 0/0 - 1/6")
-        rec.update(89, 1, 2)
-        self.assertEqual(str(rec), "[Rectangle] (89) 0/0 - 1/2")
-        rec.update(89, 1, 2, 3)
-        self.assertEqual(str(rec), "[Rectangle] (89) 3/0 - 1/2")
-        rec.update(89, 1, 2, 3, 4)
-        self.assertEqual(str(rec), "[Rectangle] (89) 3/4 - 1/2")
 
 
 if __name__ == '__main__':
