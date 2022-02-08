@@ -4,6 +4,7 @@ Unittest for rectangle([..])
 """
 import unittest
 import pep8
+from models.base import Base
 from models.rectangle import Rectangle
 
 
@@ -26,7 +27,9 @@ class TestRectangle(unittest.TestCase):
         print("Found %s errors (and warnings)" % file_errors)
 
     def test_class_rectangle(self):
+        Base._Base__nb_objects = 0
         self.assertEqual(6, 6)
+        self.assertIsInstance(Rectangle(6, 3), Base)
         self.assertAlmostEqual(Rectangle(4, 5).width, 4)
         self.assertAlmostEqual(Rectangle(5, 6).height, 6)
         self.assertAlmostEqual(Rectangle(5, 6).area(), 30)
@@ -37,6 +40,12 @@ class TestRectangle(unittest.TestCase):
         # TypeError
         with self.assertRaises(TypeError):
             rec = Rectangle()
+
+        with self.assertRaises(TypeError):
+            rec = Rectangle(6)
+
+        with self.assertRaises(TypeError):
+            rec = Rectangle(1, 2, 3, 4, 5, 6)
 
         with self.assertRaises(TypeError):
             rec = Rectangle(5, 6).area(6)
