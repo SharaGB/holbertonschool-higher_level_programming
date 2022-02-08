@@ -17,6 +17,14 @@ class TestRectangle(unittest.TestCase):
     Write unittests for the class Rectangle
     """
 
+    @classmethod
+    def setUpClass(cls):
+        Base._Base__nb_objects = 0
+        cls.r1 = Rectangle(6, 6)
+        cls.r2 = Rectangle(2, 3, 4)
+        cls.r3 = Rectangle(5, 6, 7, 8, 9)
+        cls.r4 = Rectangle(1, 2, 3, 4)
+
     def test_pep8_conformance(self):
         """ Test that we conform to PEP8. """
         pep8style = pep8.StyleGuide(quiet=True)
@@ -89,14 +97,6 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, 'y must be >= 0'):
             rec = Rectangle(6, 6, 6, -3)
-
-    @classmethod
-    def setUpClass(cls):
-        Base._Base__nb_objects = 0
-        cls.r1 = Rectangle(6, 6)
-        cls.r2 = Rectangle(2, 3, 4)
-        cls.r3 = Rectangle(5, 6, 7, 8, 9)
-        cls.r4 = Rectangle(1, 2, 3, 4)
 
     def test_str(self):
         self.assertEqual(str(self.r1), "[Rectangle] (1) 0/0 - 6/6")

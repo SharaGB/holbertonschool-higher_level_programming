@@ -5,6 +5,7 @@ Unittest for Square([..])
 import unittest
 import pep8
 from models.square import Square
+from models.base import Base
 
 
 class TestBase(unittest.TestCase):
@@ -27,7 +28,8 @@ class TestBase(unittest.TestCase):
 
     def test_square(self):
         # ID
-        # self.assertEqual(Square(3).id, 21)
+        Base._Base__nb_objects = 0
+        self.assertEqual(Square(3).id, 1)
         self.assertEqual(Square(6, 7, 8, 9).id, 9)
         # Width
         self.assertEqual(Square(3).width, 3)
