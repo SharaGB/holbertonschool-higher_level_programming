@@ -33,6 +33,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base(None).id, 2)
         self.assertEqual((5, 6), Base((5, 6)).id)
         self.assertEqual(Base("Holberton").id, "Holberton")
+        self.assertEqual(type(Base()), Base)
+        self.assertTrue(isinstance(Base(), Base))
 
     def test_base_raises(self):
         with self.assertRaises(TypeError):
