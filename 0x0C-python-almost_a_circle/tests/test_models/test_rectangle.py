@@ -118,8 +118,6 @@ class TestRectangle(unittest.TestCase):
         with io.StringIO() as display, redirect_stdout(display):
             Rectangle(3, 4).display()
 
-        with self.assertRaises(TypeError):
-            Rectangle(3, 4).display(1)
 
     def test_to_dictionary(self):
         dict1 = self.r1.to_dictionary()
@@ -134,6 +132,10 @@ class TestRectangle(unittest.TestCase):
         dict4 = self.r4.to_dictionary()
         self.assertEqual({'id': 3, 'width': 1, 'height': 2,
                           'x': 3, 'y': 4}, dict4)
+        self.assertTrue(type(dict1) is dict)
+        self.assertTrue(type(dict2) is dict)
+        self.assertTrue(type(dict3) is dict)
+        self.assertTrue(type(dict4) is dict)
 
     def test_update(self):
         rec = Rectangle(6, 6, 0, 0, 3)
