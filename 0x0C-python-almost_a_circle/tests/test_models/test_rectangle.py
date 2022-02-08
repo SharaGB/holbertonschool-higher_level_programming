@@ -4,6 +4,7 @@ Unittest for rectangle([..])
 """
 import unittest
 import pep8
+import os
 import io
 from IPython.display import display
 from contextlib import redirect_stdout
