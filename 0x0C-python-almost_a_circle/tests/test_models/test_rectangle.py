@@ -121,16 +121,6 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(3, 4).display(1)
 
-        with io.StringIO() as display, redirect_stdout(display):
-            self.r1.display()
-            output = display.getvalue()
-            self.assertEqual(output, ("#" * 10 + "\n") * 10)
-
-        with io.StringIO() as display, redirect_stdout(display):
-            r.display()
-            output = display.getvalue()
-            self.assertEqual(output, ("#" * 2 + "\n") * 3)
-
     def test_to_dictionary(self):
         dict1 = self.r1.to_dictionary()
         self.assertEqual({'id': 1, 'width': 6, 'height': 6,
