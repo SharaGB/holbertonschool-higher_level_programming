@@ -40,9 +40,10 @@ class TestRectangle(unittest.TestCase):
         self.assertAlmostEqual(Rectangle(8, 9, 10, 11).area(), 72)
 
     def test_id(self):
-        self.assertEqual(Rectangle(1, 6).id, 10)
-        self.assertEqual(Rectangle(1, 2, 3).id, 11)
-        self.assertEqual(Rectangle(4, 5, 6, 7).id, 12)
+        Base._Base__nb_objects = 0
+        self.assertEqual(Rectangle(1, 6).id, 1)
+        self.assertEqual(Rectangle(1, 2, 3).id, 2)
+        self.assertEqual(Rectangle(4, 5, 6, 7).id, 3)
         self.assertEqual(Rectangle(8, 9, 10, 11, 12).id, 12)
 
     def test_raises_rectangle(self):
@@ -147,6 +148,36 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(rec), "[Rectangle] (89) 3/0 - 1/2")
         rec.update(89, 1, 2, 3, 4)
         self.assertEqual(str(rec), "[Rectangle] (89) 3/4 - 1/2")
+
+    def test_create(self):
+        rec1 = Rectangle.create(**{'id': 89, 'width': 1})
+        rec2 = Rectangle.create(**{'id': 89, 'width': 1, 'height': 2})
+        rec3 = Rectangle.create(**{'id': 89, 'width': 1, 'height': 2, 'x': 3})
+        rec4 = Rectangle.create(
+            **{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
+        self.assertEqual("[Rectangle] (89) 0/0 - 1/6", str(rec1))
+        self.assertEqual("[Rectangle] (89) 0/0 - 1/2", str(rec2))
+        self.assertEqual("[Rectangle] (89) 3/0 - 1/2", str(rec3))
+        self.assertEqual("[Rectangle] (89) 3/4 - 1/2", str(rec4))
+
+    def test_save_to_file_none(self):
+        Rectangle.save_to_file(None)
+        with open('Rectangle.json', mode='r') as file:
+            self.assertEqual("[]", file.read())
+
+    def test_load_from_file(self):
+        try:
+            os.remove("Rectangle.json")
+        except:
+            pass
+        self.assertEqual(Rectangle.load_from_file(), [])
+
+        try:
+            os.remove("Rectangle.json")
+        except:
+            pass
+        open("Rectangle.json", 'a').close()
+        self.assertEqual(Rectangle.load_from_file(), [])
 
 
 if __name__ == '__main__':
