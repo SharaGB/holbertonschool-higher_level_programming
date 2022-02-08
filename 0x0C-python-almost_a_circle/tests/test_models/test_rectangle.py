@@ -132,7 +132,8 @@ class TestRectangle(unittest.TestCase):
 
     def test_update(self):
         rec = Rectangle(6, 6, 0, 0, 3)
-        self.assertEqual(str(Rectangle(6, 6, 0, 0, 3)), "[Rectangle] (3) 0/0 - 6/6")
+        self.assertEqual(str(Rectangle(6, 6, 0, 0, 3)),
+                         "[Rectangle] (3) 0/0 - 6/6")
         rec.update()
         self.assertEqual(str(rec), "[Rectangle] (3) 0/0 - 6/6")
         rec.update(89)
