@@ -136,6 +136,10 @@ class TestRectangle(unittest.TestCase):
         self.assertTrue(type(dict2) is dict)
         self.assertTrue(type(dict3) is dict)
         self.assertTrue(type(dict4) is dict)
+        r = Rectangle(1, 1, 1, 1, 1)
+        r.update(**dict4)
+        self.assertEqual(str(r), str(self.r4))
+        self.assertNotEqual(r, self.r4)
 
     def test_update(self):
         rec = Rectangle(6, 6, 0, 0, 3)
