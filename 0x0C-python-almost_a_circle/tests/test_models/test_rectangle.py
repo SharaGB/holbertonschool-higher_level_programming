@@ -73,3 +73,7 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, 'y must be >= 0'):
             rec = Rectangle(6, 6, 6, -3)
+
+
+if __name__ == "__main__":
+    unittest.main()
