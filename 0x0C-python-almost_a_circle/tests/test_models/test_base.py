@@ -26,6 +26,7 @@ class TestBase(unittest.TestCase):
         print("Found %s errors (and warnings)" % file_errors)
 
     def test_class_base(self):
+        """ Test cases. """
         self.assertEqual(Base().id, 1)
         self.assertEqual(Base(6).id, 6)
         self.assertEqual(Base(-6).id, -6)
@@ -58,3 +59,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base.to_json_string(None), '[]')
         self.assertEqual(Base.from_json_string(''), [])
         self.assertEqual(Base.to_json_string([{'id': 6}]), '[{"id": 6}]')
+
+
+if __name__ == '__main__':
+    unittest.main()
