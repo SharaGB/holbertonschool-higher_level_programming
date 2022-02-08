@@ -3,6 +3,7 @@
 This is the ``base`` module.
 """
 import json
+import csv
 
 
 class Base:
@@ -66,3 +67,47 @@ class Base:
                 return list(cls.create(**list_) for list_ in dict)
         except:
             return list()
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ Serializes and deserializes in CSV. """
+        filename = cls.__name__ + '.csv'
+        name = cls.__name__
+
+        if list_objs is None:
+            emp_list = []
+        else:
+            emp_list = [cls.to_dictionary(idx) for idx in list_objs]
+
+        with open(filename, mode='w') as csv_file:
+            csv_writer = csv.writer(csv_file)
+
+            if name == 'Rectangle':
+                for key in list_objs:
+                    csv_writer.writerow(['id', 'width', 'height', 'x', 'y'])
+            elif name == 'Square':
+                for key in list_objs:
+                    csv_writer.writerow(['id', 'size', 'x', 'y'])
+            return key
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Serializes and deserializes in CSV. """
+        filename = cls.__name__ + '.csv'
+        line = 0
+        dict = []
+        try:
+            with open(filename, mode='r') as csv_file:
+                csv_reader = csv.reader(csv_file)
+                for row in csv_reader:
+                    if line == 0:
+                        line += 1
+                    else:
+                        dict_ = {'id': int(row[0]), 'size': int(row[1]),
+                                 'x': int(row[2]), 'y': int(row[3])}
+                        line += 1
+                obj = cls.create(**dict_)
+                dict.append(obj)
+
+        except:
+            return dict
