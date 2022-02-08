@@ -31,6 +31,7 @@ class TestRectangle(unittest.TestCase):
         print("Found %s errors (and warnings)" % file_errors)
 
     def test_class_rectangle(self):
+        Base._Base__nb_objects = 0
         self.assertEqual(6, 6)
         self.assertIsInstance(Rectangle(6, 3), Base)
         self.assertAlmostEqual(Rectangle(4, 5).width, 4)
@@ -40,9 +41,9 @@ class TestRectangle(unittest.TestCase):
         self.assertAlmostEqual(Rectangle(8, 9, 10, 11).area(), 72)
 
     def test_id(self):
-        self.assertEqual(Rectangle(1, 6).id, 13)
-        self.assertEqual(Rectangle(1, 2, 3).id, 14)
-        self.assertEqual(Rectangle(4, 5, 6, 7).id, 15)
+        self.assertEqual(Rectangle(1, 6).id, 10)
+        self.assertEqual(Rectangle(1, 2, 3).id, 11)
+        self.assertEqual(Rectangle(4, 5, 6, 7).id, 12)
         self.assertEqual(Rectangle(8, 9, 10, 11, 12).id, 12)
 
     def test_raises_rectangle(self):
