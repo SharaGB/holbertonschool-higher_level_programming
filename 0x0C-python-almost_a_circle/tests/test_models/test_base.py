@@ -25,6 +25,14 @@ class TestBase(unittest.TestCase):
         file_errors = fchecker.check_all()
         print("Found %s errors (and warnings)" % file_errors)
 
+    def test_class_base(self):
+        self.assertEqual(Base().id, 1)
+        self.assertEqual(Base(6).id, 6)
+        self.assertEqual(Base(-6).id, -6)
+        self.assertEqual(Base(None).id, 2)
+        self.assertEqual((5, 6), Base((5, 6)).id)
+        self.assertEqual(Base("Holberton").id, "Holberton")
+
     def test_base_raises(self):
         with self.assertRaises(TypeError):
             class_base = Base(6, 6)
@@ -50,3 +58,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base.to_json_string(None), '[]')
         self.assertEqual(Base.from_json_string(''), [])
         self.assertEqual(Base.to_json_string([{'id': 6}]), '[{"id": 6}]')
+
+if __name__ == "__main__":
+    unittest.main()
