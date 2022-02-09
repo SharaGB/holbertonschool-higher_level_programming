@@ -6,6 +6,7 @@ import unittest
 import pep8
 import os
 import io
+import json
 from contextlib import redirect_stdout
 from models.base import Base
 from models.rectangle import Rectangle
@@ -132,14 +133,13 @@ class TestRectangle(unittest.TestCase):
         dict4 = self.r4.to_dictionary()
         self.assertEqual({'id': 3, 'width': 1, 'height': 2,
                           'x': 3, 'y': 4}, dict4)
-        self.assertTrue(type(dict1) is dict)
-        self.assertTrue(type(dict2) is dict)
-        self.assertTrue(type(dict3) is dict)
-        self.assertTrue(type(dict4) is dict)
-        r = Rectangle(1, 1, 1, 1, 1)
-        r.update(**dict4)
-        self.assertEqual(str(r), str(self.r4))
-        self.assertNotEqual(r, self.r4)
+        r1 = Rectangle(6, 6, 6, 6, 6)
+        r2 = Rectangle(3, 3, 3, 3, 3)
+        l = [r1, r2]
+        Rectangle.save_to_file(l)
+        with open('Rectangle.json', mode='r') as file:
+            dict = [r1.to_dictionary(), r2.to_dictionary()]
+            self.assertEqual(json.dumps(dict), file.read())
 
     def test_update(self):
         rec = Rectangle(6, 6, 0, 0, 3)
