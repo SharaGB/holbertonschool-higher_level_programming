@@ -107,19 +107,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(self.r4), "[Rectangle] (3) 3/4 - 1/2")
 
     def test_display(self):
-        r = Rectangle(2, 3, 0, 0, 1)
-        with io.StringIO() as display, redirect_stdout(display):
-            Rectangle(1, 2, 3, 4, 5).display()
-
-        with io.StringIO() as display, redirect_stdout(display):
-            Rectangle(3, 4, 5, 6).display()
-
-        with io.StringIO() as display, redirect_stdout(display):
-            Rectangle(11, 12, 13).display()
-
-        with io.StringIO() as display, redirect_stdout(display):
-            Rectangle(3, 4).display()
-
+        self.assertEqual(self.r1.display(), None)
         self.assertEqual(self.r2.display(), None)
         self.assertEqual(self.r3.display(), None)
         self.assertEqual(self.r4.display(), None)
