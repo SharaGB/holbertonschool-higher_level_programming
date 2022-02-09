@@ -10,6 +10,7 @@ import json
 from contextlib import redirect_stdout
 from models.base import Base
 from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestRectangle(unittest.TestCase):
@@ -118,6 +119,10 @@ class TestRectangle(unittest.TestCase):
 
         with io.StringIO() as display, redirect_stdout(display):
             Rectangle(3, 4).display()
+
+        self.assertEqual(self.r2.display(), None)
+        self.assertEqual(self.r3.display(), None)
+        self.assertEqual(self.r4.display(), None)
 
     def test_to_dictionary(self):
         dict1 = self.r1.to_dictionary()
