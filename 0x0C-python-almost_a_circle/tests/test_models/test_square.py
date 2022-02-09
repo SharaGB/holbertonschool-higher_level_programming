@@ -144,6 +144,14 @@ class TestBase(unittest.TestCase):
         open("Square.json", 'a').close()
         self.assertEqual(Square.load_from_file(), [])
 
+        sq1 = Square(6, 7, 8, 9)
+        sq2 = Square(10, 11, 12, 13)
+        dict = [sq1, sq2]
+        Square.save_to_file(dict)
+        dc = Square.load_from_file()
+        self.assertTrue(type(dc) is list)
+        self.assertEqual(len(dc), 2)
+
 
 if __name__ == '__main__':
     unittest.main()

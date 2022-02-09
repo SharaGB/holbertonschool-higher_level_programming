@@ -119,7 +119,6 @@ class TestRectangle(unittest.TestCase):
         with io.StringIO() as display, redirect_stdout(display):
             Rectangle(3, 4).display()
 
-
     def test_to_dictionary(self):
         dict1 = self.r1.to_dictionary()
         self.assertEqual({'id': 1, 'width': 6, 'height': 6,
@@ -135,8 +134,8 @@ class TestRectangle(unittest.TestCase):
                           'x': 3, 'y': 4}, dict4)
         r1 = Rectangle(6, 6, 6, 6, 6)
         r2 = Rectangle(3, 3, 3, 3, 3)
-        l = [r1, r2]
-        Rectangle.save_to_file(l)
+        dict_ = [r1, r2]
+        Rectangle.save_to_file(dict_)
         with open('Rectangle.json', mode='r') as file:
             dict = [r1.to_dictionary(), r2.to_dictionary()]
             self.assertEqual(json.dumps(dict), file.read())
