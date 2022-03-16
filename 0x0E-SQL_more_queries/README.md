@@ -164,6 +164,6 @@ id  name
 $
 </code></pre>
 
-<p><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/3/bc2575fee3303b731031.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20220316%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20220316T173513Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=f28c02574489e33f8434d80e6123d12a187d7acf3cf36426093177e409339c0e" alt="" style=""></p>
+![bc2575fee3303b731031](https://user-images.githubusercontent.com/90220978/158666618-7664ab05-7573-4596-b66d-bd920bbd99de.png)
 
 </div>
