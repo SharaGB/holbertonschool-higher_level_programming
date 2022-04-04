@@ -1,8 +1,11 @@
 #!/usr/bin/node
-function prints(a, b, c) {
-    console.log(arguments[0]);
-    console.log(arguments[1]);
-    console.log(arguments[2]);
-  }
-
-prints('C is fun', 'Python is cool', 'JavaScript is amazing');
+// Include process module
+const process = require('process');
+const argc = process.argv.length - 1;
+if (argc === 1) {
+  console.log('No argument');
+} else if (argc === 2) {
+  console.log('Argument found');
+} else {
+  console.log('Arguments found');
+}
