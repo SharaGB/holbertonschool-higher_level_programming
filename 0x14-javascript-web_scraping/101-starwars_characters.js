@@ -3,13 +3,13 @@ const request = require('request');
 const movieID = process.argv[2];
 const url = 'https://swapi-api.hbtn.io/api/films/' + movieID;
 
-request({ url: url, json: true }, (err, res, body) => {
+request({ url: url, json: true }, (err, response, body) => {
   if (err) {
     return console.log(err);
   }
   const characters = body.characters;
-  for (let i = 0; i < characters.length; i++) {
-    request(characters[i], (err, res, body) => {
+  for (const line of characters) {
+    request(line, (err, response, body) => {
       if (err) {
         return console.log(err);
       }
