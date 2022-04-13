@@ -3,7 +3,7 @@ window.onload = () => {
     const url = 'https://fourtonfish.com/hellosalut/?lang=';
     const valueLan = $('#language_code').val();
     $.get(url + valueLan, (data) => {
-      $('#hello').text(data.hello);
+      $('#hello').html(data.hello);
     });
   });
 };
