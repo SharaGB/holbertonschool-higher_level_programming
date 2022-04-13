@@ -69,8 +69,4 @@
 
 <p><img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/305/1f1ihd.jpg" alt="" style=""></p>
 
-<h3>Manual QA Review</h3>
-
-<p><strong>It is your responsibility to request a review for this project from a peer before the project’s deadline. If no peers have been reviewed, you should request a review from a TA or staff member.</strong></p>
-
 </div>
