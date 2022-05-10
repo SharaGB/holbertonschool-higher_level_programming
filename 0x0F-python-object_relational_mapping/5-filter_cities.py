@@ -23,7 +23,7 @@ if __name__ == '__main__':
         print("MYSQL Error: %s", str(e))
 
     # Print results
-    print(', '.join (row[0] for row in rows))
+    print(', '.join(row[0] for row in rows))
     # Close all cursors and all databases
     cursor.close()
     db.close()
