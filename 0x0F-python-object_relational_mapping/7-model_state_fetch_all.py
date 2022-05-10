@@ -16,7 +16,9 @@ if __name__ == "__main__":
     # Create a configured "Session" class
     Session = sessionmaker(bind=engine)
     session = Session()  # Create a new session
-    # Extract all State and print State' details
-    for state in session.query(State).order_by(State.id):
+    # Extract all State
+    rows = session.query(State).order_by(State.id).all()
+    # Print State' details
+    for state in rows:
         print(f"{state.id}: {state.name}")
     session.close()  # Close session
