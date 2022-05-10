@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Takes in an argument and displays all values in the states table
+Takes an argument and displays all values in the states table
     of hbtn_0e_0_usa where name matches the argument.
 """
 import MySQLdb
@@ -14,8 +14,8 @@ if __name__ == '__main__':
 
     try:
         # Get data from database
-        cursor.execute(f"SELECT * FROM states WHERE name = '{argv[4]}'\
-                        ORDER BY states.id ASC")
+        cursor.execute("SELECT * FROM states WHERE name = '{}'\
+                        ORDER BY states.id ASC".format(argv[4]))
         rows = cursor.fetchall()
     except MySQLdb.Error as e:
         print("MYSQL Error: %s", str(e))
