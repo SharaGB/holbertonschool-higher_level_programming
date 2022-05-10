@@ -14,8 +14,8 @@ if __name__ == '__main__':
 
     try:
         # Get data from database
-        cursor.execute("SELECT * FROM states WHERE name = '{}' \
-                        ORDER BY states.id ASC".format(argv[4]))
+        cursor.execute(f"SELECT * FROM states WHERE name = '{argv[4]}'\
+                        ORDER BY states.id ASC")
         rows = cursor.fetchall()
     except MySQLdb.Error as e:
         print("MYSQL Error: %s", str(e))
