@@ -22,7 +22,8 @@ if __name__ == '__main__':
 
     # Print results
     for row in rows:
-        print(row)
+        if row[1] == argv[4]:
+            print(row)
     # Close all cursors and all databases
     cursor.close()
     db.close()
