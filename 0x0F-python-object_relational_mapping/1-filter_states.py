@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     try:
         # Get data from database
-        cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' \
+        cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'\
                         ORDER BY states.id ASC")
         rows = cursor.fetchall()
     except MySQLdb.Error as e:
