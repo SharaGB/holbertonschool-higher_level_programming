@@ -18,7 +18,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()  # Create a new session
     newState = State(name='California')
-    newState.city = City(name='San Francisco')
+    newState.cities = City(name='San Francisco')
     session.add(newState)
     # Issue all remaining changes to the database and commit the transaction
     session.commit()

@@ -12,6 +12,6 @@ class State(Base):
     """ State class that inherits from Base """
     __tablename__ = 'states'
 
-    id = Column(Integer, nullable=False, primary_key=True)
+    id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    city = relationship("City", back_populates="state")  # Or backref
+    cities = relationship("City", backref="states")
