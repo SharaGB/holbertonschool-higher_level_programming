@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """
-Prints all City objects from the database hbtn_0e_14_usaLists all
-    City objects from the database hbtn_0e_101_usa
+Lists all State objects, and corresponding City objects,
+    contained in the database hbtn_0e_101_usa
 """
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from relationship_city import City
 from relationship_state import Base, State
 
 if __name__ == "__main__":
