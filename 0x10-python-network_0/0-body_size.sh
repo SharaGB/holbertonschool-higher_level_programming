@@ -1,4 +1,4 @@
 #!/bin/bash
 # Takes in a URL, sends a request to that URL, and displays the size of the body of the response
 URL="$1"
-curl -sI $URL | awk '/Content-Length/ {print $2}' # cut -d' ' -f2 works too!
+curl -sI $URL | grep -i Content-Length | cut -d' ' -f2 # awk '{print $2}' works too!, but it's slower than cut
