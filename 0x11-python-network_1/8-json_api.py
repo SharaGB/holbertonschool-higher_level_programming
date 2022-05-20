@@ -15,7 +15,7 @@ if __name__ == '__main__':
         json = request.json()
         ID = json.get('id')
         NAME = json.get('name')
-        if len(json) is not None:
+        if len(json) != 0:
             print('[{}] {}'.format(ID, NAME))
         else:
             print('No result')
