@@ -9,4 +9,5 @@ if __name__ == '__main__':
                   .format(argv[2], argv[1]))
     commits = request.json()
     for repo in commits[:10]:
-        print(repo.get('sha'), repo.get('commit').get('author').get('name'))
+        print("{}: {}".format(repo.get('sha'),
+                              repo.get('commit').get('author').get('name')))
