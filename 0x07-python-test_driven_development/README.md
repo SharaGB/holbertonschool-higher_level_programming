@@ -20,14 +20,14 @@
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/alaT1C9CeCbkRKh-yjMRww" title="doctest — Test interactive Python examples" target="_blank">doctest — Test interactive Python examples</a> (<em>until “26.2.3.7. Warnings” included</em>)</li>
-<li><a href="/rltoken/cpEYbv_Z55QrSVRiuG5tUw" title="doctest – Testing through documentation" target="_blank">doctest – Testing through documentation</a> </li>
-<li><a href="/rltoken/CELicn3K8hODQsWZak_h0g" title="Unit Tests in Python" target="_blank">Unit Tests in Python</a></li>
+<li><a href="https://docs.python.org/3.9/library/doctest.html" title="doctest — Test interactive Python examples" target="_blank">doctest — Test interactive Python examples</a> (<em>until “26.2.3.7. Warnings” included</em>)</li>
+<li><a href="https://pymotw.com/3/doctest/" title="doctest – Testing through documentation" target="_blank">doctest – Testing through documentation</a> </li>
+<li><a href="https://www.youtube.com/watch?v=1Lfv5tUGsn8" title="Unit Tests in Python" target="_blank">Unit Tests in Python</a></li>
 </ul>
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/oMvc8XjCV3WQo0fPN2hJXw" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
