@@ -52,12 +52,10 @@ In this repository you will find projects for higher-level programming.
 0. [0x00. AirBnB clone - The console](https://github.com/SharaGB/AirBnB_clone)
 1. [0x01. AirBnB clone - Web static](https://github.com/SharaGB/AirBnB_clone)
 2. [0x02. AirBnB clone - MySQL](https://github.com/SharaGB/AirBnB_clone_v2)
-3. [0x03. AirBnB clone - Deploy static]()
-4. [0x04. AirBnB clone - Web framework]()
-5. [0x05. AirBnB clone - RESTful API]()
-6. [0x06. AirBnB clone - Web dynamic]()
-
-<!-- 27. [0x1B-sorting_algorithms](https://github.com/SharaGB/sorting_algorithms)  -->
+3. [0x03. AirBnB clone - Deploy static](https://github.com/SharaGB/AirBnB_clone_v2)
+4. [0x04. AirBnB clone - Web framework](https://github.com/SharaGB/AirBnB_clone_v2)
+5. [0x05. AirBnB clone - RESTful API](https://github.com/SharaGB/AirBnB_clone_v3)
+6. [0x06. AirBnB clone - Web dynamic](https://github.com/DaboRestrepo/AirBnB_clone_v4)
 
 <div id='id-section1'/>
 
