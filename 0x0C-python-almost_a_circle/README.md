@@ -1,3 +1,5 @@
+# Python - Almost a circle
+
 <div class="well clean" id="project-description">
   <h2>Background Context</h2>
 
@@ -27,24 +29,20 @@ This project will help you be ready for it.</p>
 <li>JSON</li>
 </ul>
 
-<video autoplay="" loop="">
-  <source type="video/mp4" src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/331/giphy.mp4">
-</video>
-
 <h2>Resources</h2>
 
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/LroIjBBI5Gqq3ciR-OHmxg" title="args/kwargs" target="_blank">args/kwargs</a> </li>
-<li><a href="/rltoken/TY4rfu2AZtXlRmPVNZm1Lw" title="JSON encoder and decoder" target="_blank">JSON encoder and decoder</a> </li>
-<li><a href="/rltoken/T7uxwxtGdbRRW9pkD4eO0g" title="unittest module" target="_blank">unittest module</a> </li>
-<li><a href="/rltoken/SfEo3RQeAXXYI9yabFRw3g" title="Python test cheatsheet" target="_blank">Python test cheatsheet</a> </li>
+<li><a href="https://yasoob.me/2013/08/04/args-and-kwargs-in-python-explained/" title="args/kwargs" target="_blank">args/kwargs</a> </li>
+<li><a href="https://docs.python.org/3/library/json.html" title="JSON encoder and decoder" target="_blank">JSON encoder and decoder</a> </li>
+<li><a href="https://docs.python.org/3.4/library/unittest.html#module-unittest" title="unittest module" target="_blank">unittest module</a> </li>
+<li><a href="https://www.pythonsheets.com/notes/python-tests.html" title="Python test cheatsheet" target="_blank">Python test cheatsheet</a> </li>
 </ul>
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/bUxwUIRhI1ehqqr1UF3HaA" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
@@ -82,7 +80,7 @@ This project will help you be ready for it.</p>
 <li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
 <li>All your files should end with a new line</li>
 <li>All your test files should be inside a folder <code>tests</code></li>
-<li>You have to use the <a href="/rltoken/T7uxwxtGdbRRW9pkD4eO0g" title="unittest module" target="_blank">unittest module</a> </li>
+<li>You have to use the <a href="https://docs.python.org/3.4/library/unittest.html#module-unittest" title="unittest module" target="_blank">unittest module</a> </li>
 <li>All your test files should be python files (extension: <code>.py</code>)</li>
 <li>All your test files and folders should start with <code>test_</code></li>
 <li>Your file organization in the tests folder should be the same as your project: ex: for <code>models/base.py</code>, unit tests must be in: <code>tests/test_models/test_base.py</code></li>
