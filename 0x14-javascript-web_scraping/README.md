@@ -13,7 +13,7 @@
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/KGl7tkF5ZHilz24aw3uk_g" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
@@ -34,7 +34,7 @@
 <li>All your files should end with a new line</li>
 <li>The first line of all your files should be exactly <code>#!/usr/bin/node</code></li>
 <li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
-<li>Your code should be <code>semistandard</code> compliant. <a href="/rltoken/c82PxNOgt77URzBvKDVcqg" title="Rules of Standard" target="_blank">Rules of Standard</a> + <a href="/rltoken/GEBmmrmMUnGd20y4k6_4OA" title="semicolons on top" target="_blank">semicolons on top</a>. Also as reference: <a href="/rltoken/B5xrtt_3vxQFbcCpW5rVsw" title="AirBnB style" target="_blank">AirBnB style</a></li>
+<li>Your code should be <code>semistandard</code> compliant. <a href="https://standardjs.com/rules.html" title="Rules of Standard" target="_blank">Rules of Standard</a> + <a href="https://github.com/standard/semistandard" title="semicolons on top" target="_blank">semicolons on top</a>. Also as reference: <a href="https://github.com/airbnb/javascript" title="AirBnB style" target="_blank">AirBnB style</a></li>
 <li>All your files must be executable</li>
 <li>The length of your files will be tested using <code>wc</code></li>
 <li>You are not allowed to use <code>var</code></li>
@@ -50,14 +50,14 @@ $ sudo apt-get install -y nodejs
 
 <h3>Install semi-standard</h3>
 
-<p><a href="/rltoken/GEBmmrmMUnGd20y4k6_4OA" title="Documentation" target="_blank">Documentation</a></p>
+<p><a href="https://github.com/standard/semistandard" title="Documentation" target="_blank">Documentation</a></p>
 
 <pre><code>$ sudo npm install semistandard --global
 </code></pre>
 
 <h3>Install <code>request</code> module and use it</h3>
 
-<p><a href="/rltoken/9L4UYvlIwDVDoObD7zpJZQ" title="Documentation" target="_blank">Documentation</a></p>
+<p><a href="https://github.com/axios/axios" title="Documentation" target="_blank">Documentation</a></p>
 
 <pre><code>$ sudo npm install request --global
 $ export NODE_PATH=/usr/lib/node_modules
