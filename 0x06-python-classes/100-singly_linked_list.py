@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-"""Empty class Square definition"""
+""" Empty class Square definition """
 
 
-from lib2to3.pytree import Node
-
-
-class Nose:
-    """lass Node that defines a node of a singly linked list by:
+class Node:
+    """Class Node that defines a node of a singly linked list by:
         - Private instance attribute: data
         - Private instance attribute: next_node"""
 
@@ -51,17 +48,29 @@ class SinglyLinkedList:
         """Should be printable:
             - Print the entire list in stdout
             - One node number by line"""
-        self.__headval = None
+        self.__head = None
 
     def sorted_insert(self, value):
         """Inserts a new Node into the correct sorted position in
             the list (increasing order)"""
-        print_list = self.__headval
         new_node = Node(value)
-        if self.__headval is None:
-            self.__headval = new_node
-            return
-        while print_list is not None:
-            print(print_list.data)
-            print_list = print_list.nex_node
-            # Incompleto
+        if not self.__head or self.__head.data >= value:
+            new_node.next_node = self.__head
+            self.__head = new_node
+        else:
+            tmp = self.__head
+            while (tmp.next_node and ((tmp.next_node).data < value)):
+                tmp = tmp.next_node
+            new_node.next_node = tmp.next_node
+            tmp.next_node = new_node
+
+    def __str__(self):
+        """Print singly linked list"""
+        tmp = self.__head
+        result = ""
+        while (tmp):
+            result = result + str(tmp.data)
+            tmp = tmp.next_node
+            if (tmp):
+                result = result + "\n"
+        return (result)
