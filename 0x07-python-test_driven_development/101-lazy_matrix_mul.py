@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""
-This is the ``lazy_matrix_mul`` module.
-
-The lazy_matrix_mul module supplies one function, add_integer(a, b=98)
-"""
+"""import numpy and define the module of lazy_matrix_mul"""
 import numpy as np
 
 
 def lazy_matrix_mul(m_a, m_b):
     """
-    Function that multiplies 2 matrices by using the module NumPy
+    Multiply 2 matrix with numpy
+    Arguments:
+        - m_a: matrix1
+        - m_b: matrix2
     """
     return (np.matmul(m_a, m_b))
