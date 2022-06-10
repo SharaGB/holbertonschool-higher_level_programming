@@ -6,9 +6,9 @@
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/4SOY6RYv_fYUM-4NNB3Abg" title="Modules" target="_blank">Modules</a> </li>
-<li><a href="/rltoken/pIjNhhRLMFfHoqcTM7u3_A" title="Command line arguments" target="_blank">Command line arguments</a> </li>
-<li><a href="/rltoken/ngVTmU2SAH3NW1Z2IGqmLA" title="Pycodestyle -- Style Guide for Python Code" target="_blank">Pycodestyle – Style Guide for Python Code</a> </li>
+<li><a href="https://docs.python.org/3/tutorial/modules.html" title="Modules" target="_blank">Modules</a> </li>
+<li><a href="https://docs.python.org/3/tutorial/stdlib.html#command-line-arguments" title="Command line arguments" target="_blank">Command line arguments</a> </li>
+<li><a href="https://pypi.org/project/pycodestyle/" title="Pycodestyle -- Style Guide for Python Code" target="_blank">Pycodestyle – Style Guide for Python Code</a> </li>
 </ul>
 
 <p><strong>man or help</strong>:</p>
@@ -19,7 +19,7 @@
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/GzK0HyXjvp5fcKQiiTyLRQ" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
