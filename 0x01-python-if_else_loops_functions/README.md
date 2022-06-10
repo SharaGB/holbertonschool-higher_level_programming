@@ -8,13 +8,13 @@
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/YLjvfmHv_JJ-J-cyn8bS2Q" title="More Control Flow Tools" target="_blank">More Control Flow Tools</a> (<em>Read until “4.6. Defining Functions” included</em>)</li>
-<li><a href="/rltoken/Y-HaMMJBKPseiVDo_v9PVg" title="Myths about Indentation" target="_blank">Myths about Indentation</a> </li>
-<li><a href="/rltoken/AorC2VSZ4yCOx-AbatvKLA" title="IndentationError" target="_blank">IndentationError</a> </li>
-<li><a href="/rltoken/arGQeiwUbFn3JOoYpw84yA" title="How To Use String Formatters in Python 3" target="_blank">How To Use String Formatters in Python 3</a> </li>
-<li><a href="/rltoken/mlo-dauC8pSM_NrO5VYobw" title="Learn to Program" target="_blank">Learn to Program</a> </li>
-<li><a href="/rltoken/mlo-dauC8pSM_NrO5VYobw" title="Learn to Program 2 : Looping" target="_blank">Learn to Program 2 : Looping</a> </li>
-<li><a href="/rltoken/5uFnbDmoyPNoxwXUNxEypw" title="Pycodestyle -- Style Guide for Python Code" target="_blank">Pycodestyle – Style Guide for Python Code</a> </li>
+<li><a href="https://docs.python.org/3/tutorial/controlflow.html" title="More Control Flow Tools" target="_blank">More Control Flow Tools</a> (<em>Read until “4.6. Defining Functions” included</em>)</li>
+<li><a href="https://files.meetup.com/1544869/Python%20Indentation%20Myths.pdf" title="Myths about Indentation" target="_blank">Myths about Indentation</a> </li>
+<li><a href="https://www.youtube.com/watch?v=1QXOd2ZQs-Q" title="IndentationError" target="_blank">IndentationError</a> </li>
+<li><a href="https://realpython.com/python-f-strings/" title="How To Use String Formatters in Python 3" target="_blank">How To Use String Formatters in Python 3</a> </li>
+<li><a href="https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt" title="Learn to Program" target="_blank">Learn to Program</a> </li>
+<li><a href="https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt" title="Learn to Program 2 : Looping" target="_blank">Learn to Program 2 : Looping</a> </li>
+<li><a href="https://pypi.org/project/pycodestyle/" title="Pycodestyle -- Style Guide for Python Code" target="_blank">Pycodestyle – Style Guide for Python Code</a> </li>
 </ul>
 
 <p><strong>man or help</strong>:</p>
@@ -25,7 +25,7 @@
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/zTORGnHYbsyIZDwVtF_aZw" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
