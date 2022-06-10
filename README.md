@@ -46,16 +46,18 @@ In this repository you will find projects for higher-level programming.
 20. [0x0E. SQL - More queries](./0x0E-SQL_more_queries/)
 21. [0x0F. Python - Object-relational mapping ](./0x0F-python-object_relational_mapping/)
 
-Higher-level programming - AirBnB clone
-0. [0x00. AirBnB clone - The console]()
-1. [0x01. AirBnB clone - Web static]()
-2. [0x02. AirBnB clone - MySQL]()
+### Higher-level programming - AirBnB clone
+(* ***Separate repositories*** *)
+
+0. [0x00. AirBnB clone - The console](https://github.com/SharaGB/AirBnB_clone)
+1. [0x01. AirBnB clone - Web static](https://github.com/SharaGB/AirBnB_clone)
+2. [0x02. AirBnB clone - MySQL](https://github.com/SharaGB/AirBnB_clone_v2)
 3. [0x03. AirBnB clone - Deploy static]()
 4. [0x04. AirBnB clone - Web framework]()
 5. [0x05. AirBnB clone - RESTful API]()
 6. [0x06. AirBnB clone - Web dynamic]()
 
-<!-- 27. [0x1B-sorting_algorithms](https://github.com/SharaGB/sorting_algorithms) * ***Separate repository*** * -->
+<!-- 27. [0x1B-sorting_algorithms](https://github.com/SharaGB/sorting_algorithms)  -->
 
 <div id='id-section1'/>
 
