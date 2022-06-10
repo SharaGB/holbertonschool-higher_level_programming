@@ -5,15 +5,15 @@
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/99aGWGmLu8zsaiiJg7HCYQ" title="Inheritance" target="_blank">Inheritance</a> </li>
-<li><a href="/rltoken/ozYK1JSbEU4U6BqTggCjSA" title="Multiple inheritance" target="_blank">Multiple inheritance</a> </li>
-<li><a href="/rltoken/ycewwwPmDpXqRp2R1FW51w" title="Inheritance in Python" target="_blank">Inheritance in Python</a> </li>
-<li><a href="/rltoken/F8LUzmvPI4yur1Z37ZM1fQ" title="Learn to Program 10 : Inheritance Magic Methods" target="_blank">Learn to Program 10 : Inheritance Magic Methods</a> </li>
+<li><a href="https://docs.python.org/3/tutorial/classes.html#inheritance" title="Inheritance" target="_blank">Inheritance</a> </li>
+<li><a href="https://docs.python.org/3/tutorial/classes.html#multiple-inheritance" title="Multiple inheritance" target="_blank">Multiple inheritance</a> </li>
+<li><a href="https://www.packt.com/inheritance-python/" title="Inheritance in Python" target="_blank">Inheritance in Python</a> </li>
+<li><a href="https://www.youtube.com/watch?v=d8kCdLCi6Lk" title="Learn to Program 10 : Inheritance Magic Methods" target="_blank">Learn to Program 10 : Inheritance Magic Methods</a> </li>
 </ul>
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/3SOprDVZKpDNFQeEMQIyAQ" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
