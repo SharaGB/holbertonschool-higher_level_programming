@@ -3,17 +3,27 @@ const request = require('request');
 const movieID = process.argv[2];
 const url = 'https://swapi-api.hbtn.io/api/films/' + movieID;
 
-request({ url: url, json: true }, (err, res, body) => {
-  if (err) {
-    return console.log(err);
-  }
-  const characters = body.characters;
-  for (let i = 0; i < characters.length; i++) {
-    request(characters[i], (err, res, body) => {
-      if (err) {
-        return console.log(err);
-      }
-      console.log(JSON.parse(body).name);
-    });
+request(url, function (error, response, body) {
+  if (error) {
+    console.error('error:', error);
+  } else {
+    const characterList = JSON.parse(body).characters;
+
+    const length = characterList.length;
+    CharacterRequest(0, characterList[0], characterList, length);
   }
 });
+
+function CharacterRequest (idx, urlChar, characters, limit) {
+  if (idx === limit) { return; }
+  request(urlChar, function (error, response, body) {
+    if (!error) {
+      const rbody = JSON.parse(body);
+      console.log(rbody.name);
+      idx++;
+      CharacterRequest(idx, characters[idx], characters, limit);
+    } else {
+      console.error('error:', error);
+    }
+  });
+}
