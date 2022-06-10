@@ -1,5 +1,27 @@
 #  Python - Hello, World
 
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Concepts</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        <em>For this project, we expect you to look at these concepts:</em>
+      </p>
+      <ul>
+          <li>
+            <a href="https://intranet.hbtn.io/concepts/63">Python programming </a>
+          </li>
+          <li>
+            <a href="https://intranet.hbtn.io/concepts/550">Python programming </a>
+          </li>
+          <li>
+            <a href="https://intranet.hbtn.io/concepts/551">Python programming</a>
+          </li>
+      </ul>
+    </div>
+</div>
+
 <div class="well clean" id="project-description">
   <p><img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/231/48a9fdbd67c84a328a9df9ec8d93b9ac2458ac37721d7d53e51a27fb2bdc5263.jpg" alt="" style=""></p>
 
@@ -22,18 +44,18 @@ Enjoy!
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/3mNweasE_b9U8vtCCFVB2g" title="The Python tutorial" target="_blank">The Python tutorial</a> (<em>only the first three chapters below</em>)</li>
-<li><a href="/rltoken/FRNro28k4Q_zlkpW_si2pw" title="Whetting Your Appetite" target="_blank">Whetting Your Appetite</a> </li>
-<li><a href="/rltoken/M04rBQ5xGZtZ9yjaZsHxcA" title="Using the Python Interpreter" target="_blank">Using the Python Interpreter</a> </li>
-<li><a href="/rltoken/zVN1z9aa8L8jBhSp2AdbHw" title="An Informal Introduction to Python" target="_blank">An Informal Introduction to Python</a> (<em>Read up until “3.1.2. Strings” included</em>)</li>
-<li><a href="/rltoken/z6mk3Yep2tJVSF6KsBAYrg" title="How To Use String Formatters in Python 3" target="_blank">How To Use String Formatters in Python 3</a> </li>
-<li><a href="/rltoken/gYgGXOth8N16KjUpXgO1uQ" title="Learn to Program" target="_blank">Learn to Program</a> </li>
-<li><a href="/rltoken/fSEQ7fsRWu0uFg_wRR4KhQ" title="Pycodestyle -- Style Guide for Python Code" target="_blank">Pycodestyle – Style Guide for Python Code</a> </li>
+<li><a href="https://docs.python.org/3/tutorial/index.html" title="The Python tutorial" target="_blank">The Python tutorial</a> (<em>only the first three chapters below</em>)</li>
+<li><a href="https://docs.python.org/3/tutorial/appetite.html" title="Whetting Your Appetite" target="_blank">Whetting Your Appetite</a> </li>
+<li><a href="https://docs.python.org/3/tutorial/interpreter.html" title="Using the Python Interpreter" target="_blank">Using the Python Interpreter</a> </li>
+<li><a href="https://docs.python.org/3/tutorial/introduction.html" title="An Informal Introduction to Python" target="_blank">An Informal Introduction to Python</a> (<em>Read up until “3.1.2. Strings” included</em>)</li>
+<li><a href="https://realpython.com/python-f-strings/" title="How To Use String Formatters in Python 3" target="_blank">How To Use String Formatters in Python 3</a> </li>
+<li><a href="https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt" title="Learn to Program" target="_blank">Learn to Program</a> </li>
+<li><a href="https://pypi.org/project/pycodestyle/" title="Pycodestyle -- Style Guide for Python Code" target="_blank">Pycodestyle – Style Guide for Python Code</a> </li>
 </ul>
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/xmqgbvTwSBDY_bN0pnDXeQ" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
@@ -121,7 +143,7 @@ Namespaces are one honking great idea -- let's do more of those!
 
 <h3>Pycodestyle</h3>
 
-<p><code>Pycodestyle</code> is now the <a href="/rltoken/D67mmHg2X9ZI7QHlQxayyw" title="new standard of Python style code" target="_blank">new standard of Python style code</a></p>
+<p><code>Pycodestyle</code> is now the <a href="https://github.com/PyCQA/pycodestyle/issues/466" title="new standard of Python style code" target="_blank">new standard of Python style code</a></p>
 
 <p><br>
 <br>
