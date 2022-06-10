@@ -4,17 +4,17 @@
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/b1H-khJP64gSE3OXQaRuCA" title="7.2. Reading and Writing Files" target="_blank">7.2. Reading and Writing Files</a> </li>
-<li><a href="/rltoken/WK3WP_qtPhcDHJo4YNtL5A" title="8.7. Predefined Clean-up Actions" target="_blank">8.7. Predefined Clean-up Actions</a> </li>
-<li><a href="/rltoken/J1IflY1h8VPUkQvh3W8qoA" title="Dive Into Python 3: Chapter 11. Files" target="_blank">Dive Into Python 3: Chapter 11. Files</a> (<em>until “11.4 Binary Files” (included)</em>)</li>
-<li><a href="/rltoken/H2tqUmi9i85WeOjAbRh1Bw" title="JSON encoder and decoder" target="_blank">JSON encoder and decoder</a> </li>
-<li><a href="/rltoken/derf9VLFVDnSgX2n-drwnw" title="Learn to Program 8 : Reading / Writing Files" target="_blank">Learn to Program 8 : Reading / Writing Files</a> </li>
-<li><a href="/rltoken/Y77h8aeRoljlN643yKfdTg" title="Automate the Boring Stuff with Python" target="_blank">Automate the Boring Stuff with Python</a> (<em>ch. 8 p 180-183 and ch. 14 p 326-333</em>)</li>
+<li><a href="https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files" title="7.2. Reading and Writing Files" target="_blank">7.2. Reading and Writing Files</a> </li>
+<li><a href="https://docs.python.org/3/tutorial/errors.html#predefined-clean-up-actions" title="8.7. Predefined Clean-up Actions" target="_blank">8.7. Predefined Clean-up Actions</a> </li>
+<li><a href="https://histo.ucsf.edu/BMS270/diveintopython3-r802.pdf" title="Dive Into Python 3: Chapter 11. Files" target="_blank">Dive Into Python 3: Chapter 11. Files</a> (<em>until “11.4 Binary Files” (included)</em>)</li>
+<li><a href="https://docs.python.org/3/library/json.html" title="JSON encoder and decoder" target="_blank">JSON encoder and decoder</a> </li>
+<li><a href="https://www.youtube.com/watch?v=EukxMIsNeqU" title="Learn to Program 8 : Reading / Writing Files" target="_blank">Learn to Program 8 : Reading / Writing Files</a> </li>
+<li><a href="https://automatetheboringstuff.com" title="Automate the Boring Stuff with Python" target="_blank">Automate the Boring Stuff with Python</a> (<em>ch. 8 p 180-183 and ch. 14 p 326-333</em>)</li>
 </ul>
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/0jMG36-XftlZbM8i86LpRQ" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
