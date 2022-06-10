@@ -36,7 +36,7 @@ After, we will make our AirBnB project dynamic by using Javascript and JQuery.</
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/kr1GDINhryJdjBSzQxCv0w" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
@@ -69,7 +69,7 @@ After, we will make our AirBnB project dynamic by using Javascript and JQuery.</
 <li>All your files should end with a new line</li>
 <li>The first line of all your files should be exactly <code>#!/usr/bin/node</code></li>
 <li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
-<li>Your code should be <code>semistandard</code> compliant (version 16.x.x). <a href="/rltoken/EK3q1S4Ouo08kTMI42cSig" title="Rules of Standard" target="_blank">Rules of Standard</a> + <a href="/rltoken/FuXjfOYe18hUXCDoyMxBSg" title="semicolons on top" target="_blank">semicolons on top</a>. Also as reference: <a href="/rltoken/iIDdBVB4HNhPpb_5e5L-Qg" title="AirBnB style" target="_blank">AirBnB style</a></li>
+<li>Your code should be <code>semistandard</code> compliant (version 16.x.x). <a href="https://standardjs.com/rules.html" title="Rules of Standard" target="_blank">Rules of Standard</a> + <a href="https://github.com/standard/semistandard" title="semicolons on top" target="_blank">semicolons on top</a>. Also as reference: <a href="https://github.com/airbnb/javascript" title="AirBnB style" target="_blank">AirBnB style</a></li>
 <li>All your files must be executable</li>
 <li>The length of your files will be tested using <code>wc</code></li>
 </ul>
@@ -84,7 +84,7 @@ $ sudo apt-get install -y nodejs
 
 <h3>Install semi-standard</h3>
 
-<p><a href="/rltoken/FuXjfOYe18hUXCDoyMxBSg" title="Documentation" target="_blank">Documentation</a></p>
+<p><a href="https://github.com/standard/semistandard" title="Documentation" target="_blank">Documentation</a></p>
 
 <pre><code>$ sudo npm install semistandard --global
 </code></pre>
